@@ -39,4 +39,23 @@ class Book
     {
         return title;
     }
+    /**
+     * Exercise 2.84
+     * Print the author of the book.
+     */
+    public void printAuthor()
+    {
+    System.out.println(author);
+    }
+    /**
+     * Exercise 2.84
+     * Print the title of the book.
+     */
+    public void printTitle()
+    {
+    System.out.println(title);
+    }   
+    
+    
+    
 }
