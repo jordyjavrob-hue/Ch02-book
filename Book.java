@@ -75,14 +75,22 @@ class Book
     }
 
     /**
-     * Exercise 2.87
-     * Print all current details about the book.
+     * Exercise 2.89
+     * Print the book details and its reference number.
+     * Display ZZZ when no reference number has been set.
      */
     public void printDetails()
     {
         System.out.println("Title: " + title +
                            ", Author: " + author +
                            ", Pages: " + pages);
+
+        if(refNumber.length() > 0) {
+            System.out.println("Reference number: " + refNumber);
+        }
+        else {
+            System.out.println("Reference number: ZZZ");
+        }
     }
 
     /**
