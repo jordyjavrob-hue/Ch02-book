@@ -12,14 +12,18 @@ class Book
     private String author;
     private String title;
 
+    // Exercise 2.85: Store the number of pages.
+    private int pages;
+
     /**
-     * Set the author and title fields when this object
-     * is constructed.
+     * Set the author, title, and number of pages when
+     * this object is constructed.
      */
-    public Book(String bookAuthor, String bookTitle)
+    public Book(String bookAuthor, String bookTitle, int bookPages)
     {
         author = bookAuthor;
         title = bookTitle;
+        pages = bookPages;
     }
 
     /**
@@ -39,23 +43,31 @@ class Book
     {
         return title;
     }
+
     /**
      * Exercise 2.84
      * Print the author of the book.
      */
     public void printAuthor()
     {
-    System.out.println(author);
+        System.out.println(author);
     }
+
     /**
      * Exercise 2.84
      * Print the title of the book.
      */
     public void printTitle()
     {
-    System.out.println(title);
-    }   
-    
-    
-    
+        System.out.println(title);
+    }
+
+    /**
+     * Exercise 2.85
+     * Return the number of pages in the book.
+     */
+    public int getPages()
+    {
+        return pages;
+    }
 }
