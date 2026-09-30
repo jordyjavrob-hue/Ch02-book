@@ -21,16 +21,21 @@ class Book
     // Exercise 2.91: Store how many times the book was borrowed.
     private int borrowed;
 
+    // Exercise 2.92: Record whether this is a course textbook.
+    private boolean courseText;
+
     /**
      * Set the initial values when this object is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int bookPages)
+    public Book(String bookAuthor, String bookTitle,
+                int bookPages, boolean bookIsCourseText)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
         refNumber = "";
         borrowed = 0;
+        courseText = bookIsCourseText;
     }
 
     /**
@@ -79,7 +84,7 @@ class Book
     }
 
     /**
-     * Exercise 2.89 and Exercise 2.91
+     * Exercises 2.89, 2.91, and 2.92
      * Print all the current details about the book.
      */
     public void printDetails()
@@ -96,6 +101,7 @@ class Book
         }
 
         System.out.println("Times borrowed: " + borrowed);
+        System.out.println("Course textbook: " + courseText);
     }
 
     /**
@@ -139,5 +145,14 @@ class Book
     public int getBorrowed()
     {
         return borrowed;
+    }
+
+    /**
+     * Exercise 2.92
+     * Return whether this book is being used as a course textbook.
+     */
+    public boolean isCourseText()
+    {
+        return courseText;
     }
 }
