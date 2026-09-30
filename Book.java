@@ -1,10 +1,10 @@
 /**
- * A class that maintains information on a book.
+ * A class that maintains information about a book.
  * This might form part of a larger application such
- * as a library system, for instance.
+ * as a library system.
  *
- * @author (Insert your name here.)
- * @version (Insert today's date here.)
+ * @author Jordy Robalino
+ * @version September 29, 2026
  */
 class Book
 {
@@ -22,5 +22,21 @@ class Book
         title = bookTitle;
     }
 
-    // Add the methods here ...
+    /**
+     * Exercise 2.83
+     * Return the author of the book.
+     */
+    public String getAuthor()
+    {
+        return author;
+    }
+
+    /**
+     * Exercise 2.83
+     * Return the title of the book.
+     */
+    public String getTitle()
+    {
+        return title;
+    }
 }
