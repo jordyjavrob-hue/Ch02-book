@@ -18,6 +18,9 @@ class Book
     // Exercise 2.88: Store the library reference number.
     private String refNumber;
 
+    // Exercise 2.91: Store how many times the book was borrowed.
+    private int borrowed;
+
     /**
      * Set the initial values when this object is constructed.
      */
@@ -27,6 +30,7 @@ class Book
         title = bookTitle;
         pages = bookPages;
         refNumber = "";
+        borrowed = 0;
     }
 
     /**
@@ -75,9 +79,8 @@ class Book
     }
 
     /**
-     * Exercise 2.89
-     * Print the book details and its reference number.
-     * Display ZZZ when no reference number has been set.
+     * Exercise 2.89 and Exercise 2.91
+     * Print all the current details about the book.
      */
     public void printDetails()
     {
@@ -91,6 +94,8 @@ class Book
         else {
             System.out.println("Reference number: ZZZ");
         }
+
+        System.out.println("Times borrowed: " + borrowed);
     }
 
     /**
@@ -116,5 +121,23 @@ class Book
     public String getRefNumber()
     {
         return refNumber;
+    }
+
+    /**
+     * Exercise 2.91
+     * Record that the book has been borrowed one more time.
+     */
+    public void borrow()
+    {
+        borrowed = borrowed + 1;
+    }
+
+    /**
+     * Exercise 2.91
+     * Return the number of times the book has been borrowed.
+     */
+    public int getBorrowed()
+    {
+        return borrowed;
     }
 }
