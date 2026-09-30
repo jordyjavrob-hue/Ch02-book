@@ -94,12 +94,19 @@ class Book
     }
 
     /**
-     * Exercise 2.88
-     * Set the library reference number.
+     * Exercise 2.90
+     * Set the reference number only when it contains
+     * at least three characters.
      */
     public void setRefNumber(String ref)
     {
-        refNumber = ref;
+        if(ref.length() >= 3) {
+            refNumber = ref;
+        }
+        else {
+            System.out.println(
+                "Error: reference number must contain at least three characters.");
+        }
     }
 
     /**
