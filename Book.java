@@ -24,8 +24,9 @@ class Book
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
+        
     }
-
+   
     /**
      * Exercise 2.83
      * Return the author of the book.
@@ -70,4 +71,15 @@ class Book
     {
         return pages;
     }
+    /**
+     * Exercise 2.87
+     * Print all current details about the book.
+     */
+    public void printDetails()
+    {   
+    System.out.println("Title: " + title +
+                       ", Author: " + author +
+                       ", Pages: " + pages);
+    }
+    
 }
