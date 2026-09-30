@@ -15,18 +15,20 @@ class Book
     // Exercise 2.85: Store the number of pages.
     private int pages;
 
+    // Exercise 2.88: Store the library reference number.
+    private String refNumber;
+
     /**
-     * Set the author, title, and number of pages when
-     * this object is constructed.
+     * Set the initial values when this object is constructed.
      */
     public Book(String bookAuthor, String bookTitle, int bookPages)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
-        
+        refNumber = "";
     }
-   
+
     /**
      * Exercise 2.83
      * Return the author of the book.
@@ -71,15 +73,33 @@ class Book
     {
         return pages;
     }
+
     /**
      * Exercise 2.87
      * Print all current details about the book.
      */
     public void printDetails()
-    {   
-    System.out.println("Title: " + title +
-                       ", Author: " + author +
-                       ", Pages: " + pages);
+    {
+        System.out.println("Title: " + title +
+                           ", Author: " + author +
+                           ", Pages: " + pages);
     }
-    
+
+    /**
+     * Exercise 2.88
+     * Set the library reference number.
+     */
+    public void setRefNumber(String ref)
+    {
+        refNumber = ref;
+    }
+
+    /**
+     * Exercise 2.88
+     * Return the library reference number.
+     */
+    public String getRefNumber()
+    {
+        return refNumber;
+    }
 }
